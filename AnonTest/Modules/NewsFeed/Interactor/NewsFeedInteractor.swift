@@ -13,7 +13,7 @@ import UIKit
 class NewsFeedInteractor {
     weak var presenter: NewsFeedInteractorOutput!
 	var newsFeedService: NewsFeedSerivce!
-		
+	private var newsList: [News] = [News]()
     
     
     // MARK: Do something
@@ -23,10 +23,17 @@ class NewsFeedInteractor {
 
 
 extension NewsFeedInteractor: NewsFeedInteractorInput {
+	var newsFeed: [News] {
+		print("news count = \(newsList.count)")
+		return newsList
+	}
+	
 	
 	func setup() {
-		self.newsFeedService.fetchNewsFeed(type: .new, page: 0).done { (newsFeed) in
-			self.presenter.onNewsFeed(news: newsFeed)
+		self.newsFeedService.fetchNewsFeed(type: .new, page: 0).done { (data) in
+			print("donwload news feed count \(data.count)")
+			self.newsList = data
+			self.presenter.updateNewsFeed()
 			}.catch { (error) in
 				print(error)
 		}

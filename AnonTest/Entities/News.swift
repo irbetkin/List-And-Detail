@@ -12,6 +12,7 @@ struct News: Codable {
 	var id: Int
 	var date: Int
 	var postviews: Counting
+	
 	var text: String?
 	var lang: String?
 	var owner_photo: String?
@@ -21,6 +22,14 @@ struct News: Codable {
 	var attachments: [Attachment]?
 	var owner_name: String?
 	var owner_id: Int?
+	
+	var dateString: String{
+		return  Date().timestampToString(unixDate: date)
+	}
+	
+	var shortText: String {
+		return String(text?.suffix(100) ?? "") 
+	}
 }
 
 struct Counting: Codable{

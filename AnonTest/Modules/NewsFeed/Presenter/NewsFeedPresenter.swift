@@ -24,14 +24,28 @@ extension NewsFeedPresenter: NewsFeedModuleInput {
 }
 
 extension NewsFeedPresenter: NewsFeedPresenterInput {
+	func didSelectNews(at indexPath: IndexPath) {
+		self.router.showDetail(news: interactor.newsFeed[indexPath.row])
+	}
+	
+	
+	func news(by indexPath: IndexPath) -> News {
+		return interactor.newsFeed[indexPath.row]
+	}
+	
+	var tableViewRowCount: Int {
+		return interactor.newsFeed.count
+	}
+	
 	func setup(){
 		self.interactor.setup()
 	}
 }
 
 extension NewsFeedPresenter: NewsFeedInteractorOutput {
-	func onNewsFeed(news: [News]) {
-		
+	
+	func updateNewsFeed() {
+			self.viewController.updateNewsData()
 	}
 	
 	
