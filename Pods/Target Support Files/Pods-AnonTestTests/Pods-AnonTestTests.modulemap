@@ -1,0 +1,6 @@
+framework module Pods_AnonTestTests {
+  umbrella header "Pods-AnonTestTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
