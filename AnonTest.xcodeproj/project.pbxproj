@@ -257,10 +257,10 @@
 		5F1B4662225E2D650027B5F4 /* AnonTest */ = {
 			isa = PBXGroup;
 			children = (
+				5F1B4683225E324F0027B5F4 /* ApplicationAssembly */,
 				5F26BDF4225E6F3F0043F680 /* Entities */,
 				5F1B46AF225E33320027B5F4 /* Common */,
 				5F1B468C225E33170027B5F4 /* Utilits */,
-				5F1B4683225E324F0027B5F4 /* ApplicationAssembly */,
 				5F1B46B1225E33680027B5F4 /* Modules */,
 				5F1B4667225E2D650027B5F4 /* Main.storyboard */,
 				5F1B466A225E2D680027B5F4 /* Assets.xcassets */,

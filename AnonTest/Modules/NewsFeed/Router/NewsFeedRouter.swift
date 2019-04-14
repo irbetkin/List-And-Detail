@@ -7,22 +7,27 @@
 //
 
 
-import Foundation
+import UIKit
 
 
 class NewsFeedRouter: NewsFeedWireframeInput {
-	func showDetail(news: News) {
-		
-	}
 	
-
+	
+	
 	weak var transitionHandler: TransitionHandler!
 	
 	struct Segue {
-		static let next = "nextSegue"
+		static let detail = "detail"
 	}
 	
-	
-
-
+	func showDetail(news: News) {
+		DispatchQueue.main.async {
+			try? self.transitionHandler
+				.forSegue(identifier: Segue.detail, to: DetailNewsModuleInput.self)
+				.then { moduleInput in
+					moduleInput.config(with: news)
+					return true
+			}
+		}
+	}
 }

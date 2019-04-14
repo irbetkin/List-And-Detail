@@ -16,7 +16,8 @@ final class ApplicationAssembly {
 		return Assembler(
 			[
 				ServicesAssemblyContainer(),
-				NewsFeedAssemblyContainer()
+				NewsFeedAssemblyContainer(),
+				DetailNewsAssemblyContainer()
 		]
 		)
 	}

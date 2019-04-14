@@ -10,5 +10,5 @@
 import Foundation
 
 protocol DetailNewsInteractorInput: class {
-	
+	func config(with news: News)
 }

@@ -11,6 +11,6 @@ import Foundation
 
 
 protocol DetailNewsModuleInput {
-	
+	func config(with news: News)
 }
 
