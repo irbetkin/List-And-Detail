@@ -28,7 +28,16 @@ struct News: Codable {
 	}
 	
 	var shortText: String {
-		return String(text?.suffix(100) ?? "") 
+		guard let text = text else{
+			return ""
+		}
+		if text.count <= 100 {
+			return text
+		} else{
+			let str = text.index(text.startIndex, offsetBy: 0)..<text.index(text.startIndex, offsetBy: 100)
+			
+			return String(text[str])
+		}
 	}
 }
 

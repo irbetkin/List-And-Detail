@@ -13,6 +13,7 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.8.4):
     - PromiseKit/CorePromise
+  - PureLayout (3.1.4)
   - SDWebImage (5.0.1):
     - SDWebImage/Core (= 5.0.1)
   - SDWebImage/Core (5.0.1)
@@ -26,6 +27,7 @@ DEPENDENCIES:
   - Alamofire-SwiftyJSON
   - PluggableApplicationDelegate
   - PromiseKit (~> 6.8)
+  - PureLayout
   - SDWebImage
   - Swinject
   - SwinjectStoryboard (~> 2.2.0)
@@ -36,6 +38,7 @@ SPEC REPOS:
     - Alamofire-SwiftyJSON
     - PluggableApplicationDelegate
     - PromiseKit
+    - PureLayout
     - SDWebImage
     - SwiftyJSON
     - Swinject
@@ -46,11 +49,12 @@ SPEC CHECKSUMS:
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
   PluggableApplicationDelegate: 6b55523e4adb5b4f55c97a2d3f107990656caa4a
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   SDWebImage: 27dd2c9ea07a2252f94557c9fbb6105ee94b74c9
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 13cc45aae0cb83096e25a840714334fe2f522bc5
+PODFILE CHECKSUM: 7fd7e7e0da940b0e4634e4721c49aa39300cb763
 
 COCOAPODS: 1.5.3

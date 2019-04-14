@@ -12,20 +12,27 @@ import UIKit
 
 class DetailNewsInteractor {
     weak var presenter: DetailNewsInteractorOutput!
-    
-    //var name: String = ""
-    
-    // MARK: Do something
-    
-    func doSomething() {
-		
-    }
+    private var newsFeed: News?
+	
 }
 
 
 extension DetailNewsInteractor: DetailNewsInteractorInput {
+	var news: News? {
+		
+		return newsFeed
+	}
+	
+//	var news: News {
+//		return newsFeed!
+//	}
+	
+
+	
 	func config(with news: News) {
 		
+		self.newsFeed = news
+		print("config detail \(news.text)")
 	}
 	
 	

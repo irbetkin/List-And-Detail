@@ -17,6 +17,16 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oQ5-Lw-Lrj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="kAY-wD-iJv" kind="relationship" relationship="rootViewController" id="4a5-Ol-59P"/>
@@ -26,7 +36,7 @@
             </objects>
             <point key="canvasLocation" x="-2503" y="570"/>
         </scene>
-        <!--News Feed View Controller-->
+        <!--Новости-->
         <scene sceneID="BO6-6V-Qp4">
             <objects>
                 <viewController id="kAY-wD-iJv" customClass="NewsFeedViewController" customModule="AnonTest" customModuleProvider="target" sceneMemberID="viewController">
@@ -193,7 +203,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="W1e-ss-MH2"/>
                     </view>
-                    <navigationItem key="navigationItem" id="yIJ-sv-AfK"/>
+                    <navigationItem key="navigationItem" title="Новости" id="yIJ-sv-AfK"/>
                     <connections>
                         <outlet property="tableView" destination="CRC-L3-Pb2" id="CbA-5e-hhi"/>
                         <segue destination="OUR-0S-eA0" kind="show" identifier="detail" id="w1Y-sz-heq"/>
