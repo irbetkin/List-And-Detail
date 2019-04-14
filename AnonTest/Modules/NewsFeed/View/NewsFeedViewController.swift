@@ -31,6 +31,12 @@ extension NewsFeedViewController {
 }
 
 extension NewsFeedViewController: NewsFeedPresenterOutput {
+	func insertRows(at indexPaths: [IndexPath]) {
+		self.tableView.insertRows(at: indexPaths, with: .fade)
+		self.tableView.endUpdates()
+	}
+
+	
 	func updateNewsData() {
 		self.tableView.reloadData()
 	}
@@ -54,5 +60,11 @@ extension NewsFeedViewController: UITableViewDataSource{
 extension NewsFeedViewController: UITableViewDelegate{
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		self.presenter.didSelectNews(at: indexPath)
+	}
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		if indexPath.row == self.presenter.tableViewRowCount - 3 {
+			self.presenter.dowloadNextPage()
+		}
 	}
 }

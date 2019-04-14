@@ -12,4 +12,5 @@ import Foundation
 protocol NewsFeedInteractorInput: class {
 	func setup()
 	var newsFeed: [News] { get }
+	func dowloadNextPage()
 }

@@ -20,7 +20,12 @@ class NewsTableViewCell: UITableViewCell {
 	@IBOutlet weak var newsText: UILabel!
 	@IBOutlet weak var newsDate: UILabel!
 	@IBOutlet weak var newsAuthor: UILabel!
-	@IBOutlet weak var authorImage: UIImageView!
+	@IBOutlet weak var authorImage: UIImageView!{
+		didSet{
+			authorImage.makeRoundFrame(byValue: 2)
+		}
+	}
+
 	
 	
 	func configCell(news: News){
@@ -38,7 +43,7 @@ class NewsTableViewCell: UITableViewCell {
 		if let authorPhoto = news.owner_photo {
 			authorImage.sd_setImage(with: URL(string: authorPhoto), placeholderImage: UIImage(named: "user.png"))
 		}
-		authorImage.makeRoundFrame(byValue: 2)
+		
 
 	}
 

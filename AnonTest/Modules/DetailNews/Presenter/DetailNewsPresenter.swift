@@ -22,13 +22,15 @@ class DetailNewsPresenter {
 }
 
 extension DetailNewsPresenter: DetailNewsModuleInput {
+	func config(with news: News) {
+		
+	}
+	
 
 }
 
 extension DetailNewsPresenter: DetailNewsPresenterInput {
-	func someActionTriggered() {
-		
-	}
+
 }
 
 extension DetailNewsPresenter: DetailNewsInteractorOutput {

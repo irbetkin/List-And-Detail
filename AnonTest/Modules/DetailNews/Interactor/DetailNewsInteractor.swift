@@ -24,5 +24,9 @@ class DetailNewsInteractor {
 
 
 extension DetailNewsInteractor: DetailNewsInteractorInput {
+	func config(with news: News) {
+		
+	}
+	
 	
 }

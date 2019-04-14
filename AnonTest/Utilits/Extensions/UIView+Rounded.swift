@@ -14,4 +14,9 @@ extension UIView {
 		self.layer.cornerRadius = self.frame.size.width / byValue
 		self.clipsToBounds = true
 	}
+	
+	func setCornerRadius(byValue: CGFloat){
+		self.layer.cornerRadius = byValue
+		self.clipsToBounds = true
+	}
 }

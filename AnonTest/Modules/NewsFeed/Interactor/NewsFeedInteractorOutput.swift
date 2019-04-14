@@ -11,4 +11,5 @@ import Foundation
 
 protocol NewsFeedInteractorOutput: class {
 	func updateNewsFeed()
+	func insertRows(at indexPaths: [IndexPath])
 }

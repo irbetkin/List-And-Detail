@@ -15,5 +15,6 @@ protocol NewsFeedPresenterInput {
 	var tableViewRowCount: Int { get }
 	func news(by indexPath: IndexPath)-> News
 	func didSelectNews(at indexPath: IndexPath)
+	func dowloadNextPage()
 }
 

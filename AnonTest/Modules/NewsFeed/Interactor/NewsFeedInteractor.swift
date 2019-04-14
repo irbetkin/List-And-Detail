@@ -13,16 +13,30 @@ import UIKit
 class NewsFeedInteractor {
     weak var presenter: NewsFeedInteractorOutput!
 	var newsFeedService: NewsFeedSerivce!
+	var currentPage: Int = 0
+	
 	private var newsList: [News] = [News]()
     
     
-    // MARK: Do something
-    
+
 
 }
 
 
 extension NewsFeedInteractor: NewsFeedInteractorInput {
+	func dowloadNextPage() {
+		self.currentPage += 1
+		self.newsFeedService.fetchNewsFeed(type: .new, page: currentPage).done { (data) in
+			
+			let indexPaths = ((self.newsList.count) ..< (self.newsList.count + data.count)).map { IndexPath(row: $0, section: 0) }
+			self.newsList = self.newsList + data
+			self.presenter.insertRows(at: indexPaths)
+			}.catch { (error) in
+				print(error)
+		}
+
+	}
+	
 	var newsFeed: [News] {
 		print("news count = \(newsList.count)")
 		return newsList
@@ -30,7 +44,7 @@ extension NewsFeedInteractor: NewsFeedInteractorInput {
 	
 	
 	func setup() {
-		self.newsFeedService.fetchNewsFeed(type: .new, page: 0).done { (data) in
+		self.newsFeedService.fetchNewsFeed(type: .new, page: currentPage).done { (data) in
 			print("donwload news feed count \(data.count)")
 			self.newsList = data
 			self.presenter.updateNewsFeed()

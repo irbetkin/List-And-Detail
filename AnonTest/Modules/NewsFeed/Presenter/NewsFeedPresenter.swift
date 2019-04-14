@@ -24,6 +24,10 @@ extension NewsFeedPresenter: NewsFeedModuleInput {
 }
 
 extension NewsFeedPresenter: NewsFeedPresenterInput {
+	func dowloadNextPage() {
+		self.interactor.dowloadNextPage()
+	}
+	
 	func didSelectNews(at indexPath: IndexPath) {
 		self.router.showDetail(news: interactor.newsFeed[indexPath.row])
 	}
@@ -43,6 +47,12 @@ extension NewsFeedPresenter: NewsFeedPresenterInput {
 }
 
 extension NewsFeedPresenter: NewsFeedInteractorOutput {
+	func insertRows(at indexPaths: [IndexPath]) {
+		self.viewController.insertRows(at: indexPaths)
+	}
+	
+
+	
 	
 	func updateNewsFeed() {
 			self.viewController.updateNewsData()
