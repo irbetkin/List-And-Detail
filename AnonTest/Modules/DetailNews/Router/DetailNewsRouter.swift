@@ -1,8 +1,8 @@
 //
-//  NewsFeedRouter.swift
+//  DetailNewsRouter.swift
 //  AnonTest
 //
-//  Created by Сергей Ирбеткин on 10/04/2019.
+//  Created by Сергей Ирбеткин on 14/04/2019.
 //  Copyright (c) 2019 irbetkin. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 import Foundation
 
 
-class NewsFeedRouter: NewsFeedWireframeInput {
+class DetailNewsRouter: DetailNewsWireframeInput {
 
 	weak var transitionHandler: TransitionHandler!
 	

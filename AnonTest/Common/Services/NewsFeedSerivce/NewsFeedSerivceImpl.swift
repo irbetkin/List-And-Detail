@@ -11,7 +11,7 @@ import Alamofire
 import Alamofire_SwiftyJSON
 import SwiftyJSON
 import PromiseKit
-
+import Disk
 
 class NewsFeedSerivceImpl: NewsFeedSerivce{
 	
@@ -47,12 +47,20 @@ class NewsFeedSerivceImpl: NewsFeedSerivce{
 	}
 	
 	
-	private func printJSONResponse(response: DataResponse<Any>){
-		switch response.result{
-		case .success(let value):
-			print(JSON(value))
-		case .failure(let error):
-			print(error)
+	func cacheObject(news: [News]){
+		do{
+			try Disk.save(news, to: .caches, as: "newsFeed.json")
+		} catch{
+			print("cache problems error")
 		}
 	}
+	
+	func retrievedCachedNews()->[News]{
+		do{
+			return try Disk.retrieve("newsFeed.json", from: .caches, as: [News].self)
+		} catch {
+			return [News]()
+		}
+	}
+	
 }

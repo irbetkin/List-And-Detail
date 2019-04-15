@@ -17,7 +17,9 @@ target 'AnonTest' do
    pod 'Alamofire', '~> 4.7'
    pod 'Alamofire-SwiftyJSON'
    pod 'SDWebImage'
+   pod 'Disk'
    
+   pod 'PureLayout'
   target 'AnonTestTests' do
     inherit! :search_paths
     # Pods for testing

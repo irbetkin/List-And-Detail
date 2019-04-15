@@ -12,6 +12,7 @@ struct News: Codable {
 	var id: Int
 	var date: Int
 	var postviews: Counting
+	
 	var text: String?
 	var lang: String?
 	var owner_photo: String?
@@ -21,6 +22,23 @@ struct News: Codable {
 	var attachments: [Attachment]?
 	var owner_name: String?
 	var owner_id: Int?
+	
+	var dateString: String{
+		return  Date().timestampToString(unixDate: date)
+	}
+	
+	var shortText: String {
+		guard let text = text else{
+			return ""
+		}
+		if text.count <= 100 {
+			return text
+		} else{
+			let str = text.index(text.startIndex, offsetBy: 0)..<text.index(text.startIndex, offsetBy: 100)
+			
+			return String(text[str])
+		}
+	}
 }
 
 struct Counting: Codable{

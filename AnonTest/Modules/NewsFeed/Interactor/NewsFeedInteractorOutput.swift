@@ -1,5 +1,5 @@
 //
-//  NewsFeedPresenterOutput.swift
+//  NewsFeedInteractorOutput.swift
 //  AnonTest
 //
 //  Created by Сергей Ирбеткин on 10/04/2019.
@@ -9,8 +9,7 @@
 
 import Foundation
 
-
-protocol NewsFeedPresenterOutput: class {
-	
+protocol NewsFeedInteractorOutput: class {
+	func updateNewsFeed()
+	func insertRows(at indexPaths: [IndexPath])
 }
-

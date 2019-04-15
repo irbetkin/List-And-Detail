@@ -19,16 +19,32 @@ class NewsTableViewCell: UITableViewCell {
 	@IBOutlet weak var newsWatchCount: UILabel!
 	@IBOutlet weak var newsText: UILabel!
 	@IBOutlet weak var newsDate: UILabel!
-	@IBOutlet weak var newAuthor: UILabel!
-	@IBOutlet weak var AuthorImage: UIImageView!
+	@IBOutlet weak var newsAuthor: UILabel!
+	@IBOutlet weak var authorImage: UIImageView!{
+		didSet{
+			authorImage.makeRoundFrame(byValue: 2)
+		}
+	}
+
 	
 	
 	func configCell(news: News){
 		if let photo = news.attachments?.first?.photo?.photo_medium{
-			newsImage.sd_setImage(with: URL(string: photo), placeholderImage: UIImage(named: "placeholder.png"))
-			
+			newsImage.sd_setImage(with: URL(string: photo), placeholderImage: UIImage(named: "user.png"))
+		}
+		newsText.text = news.shortText
+		newsLikeBtn.setTitle("\(news.likes.count)", for: .normal)
+		newsDislikeBtn.setTitle("\(news.dislikes.count)", for: .normal)
+		newsCommetnBtn.setTitle("\(news.comments.count)", for: .normal)
+		newsWatchCount.text = String(news.postviews.count)
+		
+		newsDate.text = news.dateString
+		newsAuthor.text = news.owner_name
+		if let authorPhoto = news.owner_photo {
+			authorImage.sd_setImage(with: URL(string: authorPhoto), placeholderImage: UIImage(named: "user.png"))
 		}
 		
+
 	}
 
     override func awakeFromNib() {
