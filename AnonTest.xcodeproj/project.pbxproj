@@ -21,8 +21,6 @@
 		5F1494032263A4E3005A15F1 /* DetailNewsModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1493F72263A4E3005A15F1 /* DetailNewsModuleInput.swift */; };
 		5F1494042263A4E3005A15F1 /* DetailNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1493F82263A4E3005A15F1 /* DetailNewsInteractor.swift */; };
 		5F1494052263A4E3005A15F1 /* DetailNewsPresenterOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1493F92263A4E3005A15F1 /* DetailNewsPresenterOutput.swift */; };
-		5F1B4666225E2D650027B5F4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B4665225E2D650027B5F4 /* ViewController.swift */; };
-		5F1B4669225E2D650027B5F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1B4667225E2D650027B5F4 /* Main.storyboard */; };
 		5F1B466B225E2D680027B5F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5F1B466A225E2D680027B5F4 /* Assets.xcassets */; };
 		5F1B466E225E2D680027B5F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F1B466C225E2D680027B5F4 /* LaunchScreen.storyboard */; };
 		5F1B4679225E2D680027B5F4 /* AnonTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1B4678225E2D680027B5F4 /* AnonTestTests.swift */; };
@@ -94,8 +92,6 @@
 		5F1493F82263A4E3005A15F1 /* DetailNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsInteractor.swift; sourceTree = "<group>"; };
 		5F1493F92263A4E3005A15F1 /* DetailNewsPresenterOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsPresenterOutput.swift; sourceTree = "<group>"; };
 		5F1B4660225E2D650027B5F4 /* AnonTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnonTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5F1B4665225E2D650027B5F4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5F1B4668225E2D650027B5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5F1B466A225E2D680027B5F4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5F1B466D225E2D680027B5F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5F1B466F225E2D680027B5F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -262,10 +258,8 @@
 				5F1B46AF225E33320027B5F4 /* Common */,
 				5F1B468C225E33170027B5F4 /* Utilits */,
 				5F1B46B1225E33680027B5F4 /* Modules */,
-				5F1B4667225E2D650027B5F4 /* Main.storyboard */,
 				5F1B466A225E2D680027B5F4 /* Assets.xcassets */,
 				5F1B466C225E2D680027B5F4 /* LaunchScreen.storyboard */,
-				5F1B4665225E2D650027B5F4 /* ViewController.swift */,
 				5F1B466F225E2D680027B5F4 /* Info.plist */,
 			);
 			path = AnonTest;
@@ -559,7 +553,6 @@
 				5F1B466E225E2D680027B5F4 /* LaunchScreen.storyboard in Resources */,
 				5F1494002263A4E3005A15F1 /* DetailNewsViewController.storyboard in Resources */,
 				5F1B466B225E2D680027B5F4 /* Assets.xcassets in Resources */,
-				5F1B4669225E2D650027B5F4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,8 +575,10 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-AnonTest/Pods-AnonTest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-SwiftyJSON/Alamofire_SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Disk/Disk.framework",
 				"${BUILT_PRODUCTS_DIR}/PluggableApplicationDelegate/PluggableApplicationDelegate.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
@@ -593,8 +588,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire_SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Disk.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PluggableApplicationDelegate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
@@ -660,7 +657,6 @@
 				5F1493E922638CC3005A15F1 /* UIView+Rounded.swift in Sources */,
 				5F1B46A8225E33170027B5F4 /* LightRouteErrors.swift in Sources */,
 				5F1B46A5225E33170027B5F4 /* CustomTransitionNode.swift in Sources */,
-				5F1B4666225E2D650027B5F4 /* ViewController.swift in Sources */,
 				5F1B46C6225E33CA0027B5F4 /* NewsFeedPresenterInput.swift in Sources */,
 				5F1493FD2263A4E3005A15F1 /* DetailNewsPresenter.swift in Sources */,
 				5F1B46A9225E33170027B5F4 /* StoryboardFactory.swift in Sources */,
@@ -718,14 +714,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5F1B4667225E2D650027B5F4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5F1B4668225E2D650027B5F4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5F1B466C225E2D680027B5F4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
