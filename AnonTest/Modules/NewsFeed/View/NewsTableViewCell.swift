@@ -30,7 +30,8 @@ class NewsTableViewCell: UITableViewCell {
 	
 	func configCell(news: News){
 		if let photo = news.attachments?.first?.photo?.photo_medium{
-			newsImage.sd_setImage(with: URL(string: photo), placeholderImage: UIImage(named: "user.png"))
+			newsImage.sd_setImage(with: URL(string: photo), placeholderImage: UIImage(named: "news_placeholder.png"))
+			
 		}
 		newsText.text = news.shortText
 		newsLikeBtn.setTitle("\(news.likes.count)", for: .normal)
@@ -41,6 +42,7 @@ class NewsTableViewCell: UITableViewCell {
 		newsDate.text = news.dateString
 		newsAuthor.text = news.owner_name
 		if let authorPhoto = news.owner_photo {
+			
 			authorImage.sd_setImage(with: URL(string: authorPhoto), placeholderImage: UIImage(named: "user.png"))
 		}
 		
