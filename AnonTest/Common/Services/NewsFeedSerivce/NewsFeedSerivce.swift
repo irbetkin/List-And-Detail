@@ -11,4 +11,6 @@ import PromiseKit
 
 protocol NewsFeedSerivce {
 	func fetchNewsFeed(type: NewsFeedType, page: Int)->Promise<[News]>
+	func retrievedCachedNews()->[News]
+	func cacheObject(news: [News])
 }

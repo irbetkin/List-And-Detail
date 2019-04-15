@@ -3,6 +3,7 @@ PODS:
   - Alamofire-SwiftyJSON (3.0.0):
     - Alamofire (~> 4.5)
     - SwiftyJSON (~> 4.0.0)
+  - Disk (0.6.3)
   - PluggableApplicationDelegate (0.2.0)
   - PromiseKit (6.8.4):
     - PromiseKit/CorePromise (= 6.8.4)
@@ -25,6 +26,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - Alamofire-SwiftyJSON
+  - Disk
   - PluggableApplicationDelegate
   - PromiseKit (~> 6.8)
   - PureLayout
@@ -36,6 +38,7 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
     - Alamofire-SwiftyJSON
+    - Disk
     - PluggableApplicationDelegate
     - PromiseKit
     - PureLayout
@@ -47,6 +50,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   Alamofire-SwiftyJSON: 2b3649d57dc7bb2880fb8b86f8bb969397666916
+  Disk: 76cccb6fed1c27cd661bbdea7b117d887c2f72e5
   PluggableApplicationDelegate: 6b55523e4adb5b4f55c97a2d3f107990656caa4a
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
@@ -55,6 +59,6 @@ SPEC CHECKSUMS:
   Swinject: 48a96cda93633cf2860697b4ce76ab5db9ebaca2
   SwinjectStoryboard: 32512ef16c2b0ff5b8f823b23539c4a50f6d3383
 
-PODFILE CHECKSUM: 7fd7e7e0da940b0e4634e4721c49aa39300cb763
+PODFILE CHECKSUM: ec33760af6e0ffeddf0c2543b8968013e9cb7060
 
 COCOAPODS: 1.5.3
