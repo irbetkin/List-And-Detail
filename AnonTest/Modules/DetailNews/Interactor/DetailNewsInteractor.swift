@@ -32,7 +32,7 @@ extension DetailNewsInteractor: DetailNewsInteractorInput {
 	func config(with news: News) {
 		
 		self.newsFeed = news
-		print("config detail \(news.text)")
+		
 	}
 	
 	
