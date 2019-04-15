@@ -23,11 +23,12 @@ class NewsFeedRouter: NewsFeedWireframeInput {
 	func showDetail(news: News) {
 		DispatchQueue.main.async {
 			try? self.transitionHandler
-				.forSegue(identifier: Segue.detail, to: DetailNewsModuleInput.self)
+				.forSegue(identifier: Segue.detail, to: DetailNewsPresenter.self)
 				.then { moduleInput in
 					moduleInput.config(with: news)
 					return true
 			}
+			
 		}
 	}
 }

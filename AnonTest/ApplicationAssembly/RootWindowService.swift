@@ -13,7 +13,8 @@ import PluggableApplicationDelegate
 
 enum RouteGate: String {
 
-	case NewsFeed = "NewsFeedViewController"
+	case NewsFeed = //"DetailNewsViewController"
+	"NewsFeedViewController"
 	
 }
 

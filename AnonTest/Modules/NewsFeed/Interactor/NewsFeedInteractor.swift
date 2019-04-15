@@ -44,9 +44,12 @@ extension NewsFeedInteractor: NewsFeedInteractorInput {
 	
 	
 	func setup() {
+		self.newsList = self.newsFeedService.retrievedCachedNews()
+		self.presenter.updateNewsFeed()		
 		self.newsFeedService.fetchNewsFeed(type: .new, page: currentPage).done { (data) in
 			print("donwload news feed count \(data.count)")
 			self.newsList = data
+			self.newsFeedService.cacheObject(news: data)
 			self.presenter.updateNewsFeed()
 			}.catch { (error) in
 				print(error)

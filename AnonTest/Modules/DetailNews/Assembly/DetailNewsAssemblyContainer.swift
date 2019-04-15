@@ -26,6 +26,7 @@ final class DetailNewsAssemblyContainer: Assembly {
 		}
 		
 		container.register(DetailNewsPresenter.self) { (r, viewController: DetailNewsViewController) in
+			
 			let presenter = DetailNewsPresenter()
 			
 			presenter.viewController = viewController
